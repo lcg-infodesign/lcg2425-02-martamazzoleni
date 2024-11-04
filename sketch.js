@@ -5,7 +5,6 @@ function setup() {
 
 function draw() {
   background("white");
-  stroke("0")
   strokeWeight(1);
   noFill
 
@@ -26,12 +25,23 @@ function drawBoccioli(size) {
   let numEllipses = int(random(7, 12)); 
   let angleStep = TWO_PI / numEllipses;
 
+  
+  let colorPalette = [
+    color(255, 204, 0),   
+    color(255, 153, 51),  
+    color(255, 102, 102), 
+    color(204, 51, 102),  
+    color(153, 0, 51),    
+    color(102, 0, 51)     
+  ];
+
   for (let i = 0; i < numEllipses; i++) {
     let angle = i * angleStep;
     
     let ellipseWidth = random(size * 0.6, size); 
     let ellipseHeight = random(size * 0.3, size * 0.8); 
     
+    stroke(colorPalette[int(random(colorPalette.length))]);
 
     push();
     rotate(angle);
