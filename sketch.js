@@ -45,7 +45,6 @@ function drawBoccioli(size) {
 
     //colore stroke dalla palette
     stroke(colorPalette[int(random(colorPalette.length))]);
-
     push();
     rotate(angle);
     translate(0, size / 4); //pos. ellissi per creare intersez.
