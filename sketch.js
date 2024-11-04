@@ -48,7 +48,7 @@ function drawBoccioli(size) {
 
     push();
     rotate(angle);
-    translate(0, size / 4); //pos. le ellissi per creare intersez.
+    translate(0, size / 4); //pos. ellissi per creare intersez.
     ellipse(0, 0, ellipseWidth, ellipseHeight);
     pop();
   }
